@@ -1,4 +1,4 @@
-sudo apt install -yy python3-dev ghidra autojump openjdk-21-jdk zsh-autosuggestions zsh-syntax-highlighting jq fd-find npm nodejs strace gdb python3-pwntools python3-numpy sshuttle feroxbuster gobuster wget seclists python3-cryptodome xh zoxide pandoc poppler-utils ffmpeg dust wine64 wine32 winetricks certipy-ad ligolo-ng chisel trivy keepassxc-minimal 
+sudo apt install -yy python3-dev ghidra autojump openjdk-21-jdk zsh-autosuggestions zsh-syntax-highlighting jq fd-find npm nodejs strace gdb python3-pwntools python3-numpy sshuttle feroxbuster gobuster wget seclists python3-cryptodome xh zoxide pandoc poppler-utils ffmpeg wine64 winetricks certipy-ad ligolo-ng chisel trivy keepass2 golang-go qemu-utils guestfs-tools
 # Download ripgrep-all: https://github.com/phiresky/ripgrep-all/releases
 
 # Install uv for Python package management
@@ -9,7 +9,7 @@ source /usr/share/autojump/autojump.zsh
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source "$HOME/.cargo/env"
-cargo install tealdeer ripgrep bat
+cargo install tealdeer ripgrep bat du-dust
 
 # Download/install tools from sources
 wget https://github.com/SpecterOps/bloodhound-cli/releases/latest/download/bloodhound-cli-linux-amd64.tar.gz  # bloodhound-cli install
