@@ -1,4 +1,41 @@
-sudo apt install -yy python3-dev ghidra autojump openjdk-21-jdk zsh-autosuggestions zsh-syntax-highlighting jq fd-find npm nodejs strace gdb python3-pwntools python3-numpy sshuttle feroxbuster gobuster wget seclists python3-cryptodome xh zoxide pandoc poppler-utils ffmpeg wine64 winetricks certipy-ad ligolo-ng chisel trivy keepass2 golang-go qemu-utils guestfs-tools
+sudo apt install -yy \
+    python3-dev \
+    ghidra \
+    autojump \
+    openjdk-21-jdk \
+    zsh-autosuggestions \
+    zsh-syntax-highlighting \
+    jq \
+    fd-find \
+    npm \
+    nodejs \
+    strace \
+    gdb \
+    python3-pwntools \
+    python3-numpy \
+    sshuttle \
+    feroxbuster \
+    gobuster \
+    wget \
+    seclists \
+    python3-cryptodome \
+    xh \
+    zoxide \
+    pandoc \
+    poppler-utils \
+    ffmpeg \
+    wine64 \
+    winetricks \
+    certipy-ad \
+    ligolo-ng \
+    chisel \
+    trivy \
+    keepass2 \
+    golang-go \
+    qemu-utils \
+    guestfs-tools \
+    docker.io \
+    bc
 # Download ripgrep-all: https://github.com/phiresky/ripgrep-all/releases
 
 # Install uv for Python package management
