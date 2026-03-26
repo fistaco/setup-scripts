@@ -35,7 +35,8 @@ sudo apt install -yy \
     qemu-utils \
     guestfs-tools \
     docker.io \
-    bc
+    bc \
+    cmake
 # Download ripgrep-all: https://github.com/phiresky/ripgrep-all/releases
 
 # Install uv for Python package management
