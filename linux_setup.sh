@@ -6,7 +6,6 @@ sudo apt install -yy \
     zsh-autosuggestions \
     zsh-syntax-highlighting \
     jq \
-    fd-find \
     npm \
     nodejs \
     strace \
@@ -18,14 +17,12 @@ sudo apt install -yy \
     gobuster \
     wget \
     seclists \
-    python3-cryptodome \
     xh \
     zoxide \
     pandoc \
     poppler-utils \
     ffmpeg \
     wine64 \
-    winetricks \
     certipy-ad \
     ligolo-ng \
     chisel \
@@ -47,7 +44,7 @@ source /usr/share/autojump/autojump.zsh
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source "$HOME/.cargo/env"
-cargo install tealdeer ripgrep bat du-dust
+cargo install tealdeer ripgrep bat du-dust fd-find
 
 # Download/install tools from sources
 wget https://github.com/SpecterOps/bloodhound-cli/releases/latest/download/bloodhound-cli-linux-amd64.tar.gz  # bloodhound-cli install
@@ -56,6 +53,7 @@ curl -fsSL https://raw.githubusercontent.com/opengrep/opengrep/main/install.sh |
 
 
 # Download VS Code
-# Download obsidian
+curl -L -o vscode.deb "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
+sudo apt install ./vscode.deb
 
-echo 'ROCKYOU=/usr/share/wordlists/rockyou.txt' >> ~/.zshrc
+# Download obsidian
