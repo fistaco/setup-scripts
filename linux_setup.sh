@@ -50,7 +50,7 @@ cargo install tealdeer ripgrep bat du-dust fd-find
 wget https://github.com/SpecterOps/bloodhound-cli/releases/latest/download/bloodhound-cli-linux-amd64.tar.gz  # bloodhound-cli install
 curl -fsSL https://raw.githubusercontent.com/opengrep/opengrep/main/install.sh | bash  # opengrep
 # git clone https://github.com/opengrep/opengrep-rules
-
+# Avalonia ILSpy: https://github.com/icsharpcode/AvaloniaILSpy/releases (consider the VS Code extension as well)
 
 # Download VS Code
 curl -L -o vscode.deb "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
