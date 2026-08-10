@@ -1,0 +1,27 @@
+[user]
+	name = fistaco
+	email = fiske_schijlen@hotmail.com 
+
+[alias]
+	a = add
+	au = add --update
+	b = branch
+	c = commit
+	cb = branch --show-current
+	co = checkout
+	cob = checkout -b
+  comdiff = diff --cached
+	d = diff
+	devdiff = diff origin/develop..HEAD
+	f = fetch
+	fa = fetch --all
+	fo = fetch origin
+	ggall = "!f() { git rev-list --all | while read -r commit; do git grep \"$@\" \"$commit\"; done; }; f"
+	grepall = "!f() { git rev-list --all | xargs -n 100 git grep -n -- \"$@\"; }; f"
+	l = log
+	lo = log --oneline
+	p = pull
+	pushup = push --set-upstream origin $(git branch --show-current)
+	rebdev = pull --rebase origin develop --autostash
+	s = status
+	undocommit = reset --soft HEAD~1
