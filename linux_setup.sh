@@ -33,7 +33,12 @@ sudo apt install -yy \
     guestfs-tools \
     docker.io \
     bc \
-    cmake
+    cmake \
+    duf \
+    ripgrep-all \
+    btop \
+    choose \
+    obsidian
 # Download ripgrep-all: https://github.com/phiresky/ripgrep-all/releases
 
 # Install uv for Python package management
@@ -45,15 +50,22 @@ source /usr/share/autojump/autojump.zsh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source "$HOME/.cargo/env"
 cargo install tealdeer ripgrep bat du-dust fd-find
+cargo install xan starship tickrs --locked
 
 # Download/install tools from sources
 wget https://github.com/SpecterOps/bloodhound-cli/releases/latest/download/bloodhound-cli-linux-amd64.tar.gz  # bloodhound-cli install
 curl -fsSL https://raw.githubusercontent.com/opengrep/opengrep/main/install.sh | bash  # opengrep
 # git clone https://github.com/opengrep/opengrep-rules
 # Avalonia ILSpy: https://github.com/icsharpcode/AvaloniaILSpy/releases (consider the VS Code extension as well)
+go install github.com/schollz/croc/v10@latest
 
 # Download VS Code
 curl -L -o vscode.deb "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
 sudo apt install ./vscode.deb
+cat vscode_extensions.txt | xargs -n1 code --install-extension
 
-# Download obsidian
+# Install espanso
+wget https://github.com/espanso/espanso/releases/latest/download/espanso-debian-x11-amd64.deb
+sudo apt install -y ./espanso-debian-x11-amd64.deb
+espanso service register
+espanso start
