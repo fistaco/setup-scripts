@@ -10,7 +10,7 @@
 	cb = branch --show-current
 	co = checkout
 	cob = checkout -b
-  comdiff = diff --cached
+    comdiff = diff --cached
 	d = diff
 	devdiff = diff origin/develop..HEAD
 	f = fetch
@@ -25,3 +25,5 @@
 	rebdev = pull --rebase origin develop --autostash
 	s = status
 	undocommit = reset --soft HEAD~1
+[core]
+	editor = vim
