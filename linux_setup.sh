@@ -38,7 +38,9 @@ sudo apt install -yy \
     ripgrep-all \
     btop \
     choose \
-    obsidian
+    obsidian \
+    fzf \
+    payloadsallthethings
 # Download ripgrep-all: https://github.com/phiresky/ripgrep-all/releases
 
 # Install uv for Python package management
@@ -49,8 +51,11 @@ source /usr/share/autojump/autojump.zsh
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source "$HOME/.cargo/env"
-cargo install tealdeer ripgrep bat du-dust fd-find
+cargo install tealdeer ripgrep bat du-dust fd-find nfswolf
 cargo install xan starship tickrs --locked
+
+# Tool init
+tldr --update
 
 # Download/install tools from sources
 wget https://github.com/SpecterOps/bloodhound-cli/releases/latest/download/bloodhound-cli-linux-amd64.tar.gz  # bloodhound-cli install
