@@ -69,8 +69,21 @@ curl -L -o vscode.deb "https://code.visualstudio.com/sha/download?build=stable&o
 sudo apt install ./vscode.deb
 cat vscode_extensions.txt | xargs -n1 code --install-extension
 
-# Install espanso
-wget https://github.com/espanso/espanso/releases/latest/download/espanso-debian-x11-amd64.deb
-sudo apt install -y ./espanso-debian-x11-amd64.deb
+# Install the Espanso build matching the active display server.
+# Stop first so a package replacement cannot leave the old executable running.
+if command -v espanso >/dev/null 2>&1; then
+    espanso stop || true
+fi
+if [ "${XDG_SESSION_TYPE:-x11}" = "wayland" ]; then
+    ESPANSO_DEB="espanso-debian-wayland-amd64.deb"
+    dpkg-query -W espanso >/dev/null 2>&1 && sudo apt remove -y espanso
+else
+    ESPANSO_DEB="espanso-debian-x11-amd64.deb"
+    dpkg-query -W espanso-wayland >/dev/null 2>&1 && sudo apt remove -y espanso-wayland
+fi
+wget -O "$ESPANSO_DEB" "https://github.com/espanso/espanso/releases/latest/download/$ESPANSO_DEB"
+sudo apt install -y "./$ESPANSO_DEB"
 espanso service register
 espanso start
+
+# Install ghostty if desired: https://ghostty.org/docs/install/binary
