@@ -7,5 +7,19 @@ When relevant, use these CLI tools instead of their default alternatives:
 - `rga` (ripgrep-all) to search for strings in files that do not just contain plain text
 
 When writing or executing Python code, use `uv`:
+
 - `uv venv` to create a virtual environment, which should be activated immediately after creation
 - `uv run <path_to_script>` to run Python scripts
+- Define a `pyproject.toml` file appropriate for the project at hand. A command line tool should eventually be installable with `uv tool install <git_repository_url>`.
+
+# Software development
+
+## Project organization
+
+- Adhere to directory and repository structuring conventions corresponding to the programming language and tools being used
+- Keep helper scripts for the project in their own subdirectory called "scripts"
+
+# Version control
+
+- When starting a new project, use `git init` to create a Git repository
+- Do not `git commit` unless explicitly instructed to do so
