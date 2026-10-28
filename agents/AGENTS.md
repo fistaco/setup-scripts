@@ -18,6 +18,7 @@ When writing or executing Python code, use `uv`:
 
 - Adhere to directory and repository structuring conventions corresponding to the programming language and tools being used
 - Keep helper scripts for the project in their own subdirectory called "scripts"
+- Maintain `./docs/PROJECT.md` in a software project's repository, with its contents describing the project's purpose, architecture, and features. Feature descriptions should include concise descriptions on how the feature works under the hood.
 
 # Version control
 
